@@ -18,7 +18,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -26,7 +26,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:femaSocialVulnerability_NaturalHazardImpact', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:FemaSocialVulnerability_NaturalHazardImpact', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -34,7 +34,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:femaCommunityResilience_NaturalHazardImpact', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:FemaCommunityResilience_NaturalHazardImpact', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -42,7 +42,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact_AvalancheEvent', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact_AvalancheEvent', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -50,7 +50,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact_CoastalFloodEvent', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact_CoastalFloodEvent', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -58,7 +58,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact_ColdWaveEvent', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact_ColdWaveEvent', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -66,7 +66,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact_DroughtEvent', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact_DroughtEvent', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -74,7 +74,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact_EarthquakeEvent', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact_EarthquakeEvent', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -82,7 +82,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact_HailEvent', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact_HailEvent', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -90,7 +90,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact_HeatWaveEvent', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact_HeatWaveEvent', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -98,7 +98,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact_HurricaneEvent', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact_HurricaneEvent', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -106,7 +106,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact_IceStormEvent', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact_IceStormEvent', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -114,7 +114,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact_LandslideEvent', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact_LandslideEvent', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -122,7 +122,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact_LightningEvent', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact_LightningEvent', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -130,7 +130,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact_RiverineFloodingEvent', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact_RiverineFloodingEvent', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -138,7 +138,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact_StrongWindEvent', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact_StrongWindEvent', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -146,7 +146,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact_TornadoEvent', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact_TornadoEvent', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -154,7 +154,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact_TsunamiEvent', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact_TsunamiEvent', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -162,7 +162,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact_VolcanicActivityEvent', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact_VolcanicActivityEvent', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -170,7 +170,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact_WildfireEvent', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact_WildfireEvent', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }, {
     "level": "LEVEL_ERROR",
@@ -178,7 +178,7 @@
       "file": "FileNotSet.idk",
       "lineNumber": "-1"
     },
-    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_expectedLoss_NaturalHazardImpact_WinterWeatherEvent', type: 'StatisticalVariable'",
+    "userMessage": "Found a missing or empty property value :: property: 'dcid', node: 'dcid:Annual_ExpectedLoss_NaturalHazardImpact_WinterWeatherEvent', type: 'StatisticalVariable'",
     "counterKey": "Sanity_MissingOrEmpty_dcid"
   }],
   "commandArgs": {
