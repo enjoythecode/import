@@ -20,7 +20,7 @@ Node: dcid:femaCommunityResilience
 dcid: "femaCommunityResilience"
 descriptionUrl: "https://hazards.fema.gov/nri/community-resilience"
 name: "femaCommunityResilience"
-description: "adapt to changing conditions", "The ability of a community to prepare for anticipated natural hazards", "and withstand and recover rapidly from disruptions."
+description: "and withstand and recover rapidly from disruptions.", "The ability of a community to prepare for anticipated natural hazards", "adapt to changing conditions"
 typeOf: dcid:Property
 domainIncludes: dcid:NaturalHazardImpact
 
@@ -193,7 +193,7 @@ Node: dcid:FemaNationalRiskScore
 dcid: "FemaNationalRiskScore"
 name: "FemaNationalRiskScore"
 descriptionUrl: "https://hazards.fema.gov/nri/understanding-scores-ratings"
-description: "A unit describing the relative risk from natural hazards that a place is estimated to be", "where 0 is the least at risk", "according to the FEMA National Risk Index study. Ranging from 0 to 100", "and 100 is the most at risk."
+description: "and 100 is the most at risk.", "where 0 is the least at risk", "according to the FEMA National Risk Index study. Ranging from 0 to 100", "A unit describing the relative risk from natural hazards that a place is estimated to be"
 typeOf: dcid:UnitOfMeasure
 
 Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_WinterWeatherEvent
@@ -266,7 +266,7 @@ Node: dcid:femaSocialVulnerability
 dcid: "femaSocialVulnerability"
 descriptionUrl: "https://hazards.fema.gov/nri/social-vulnerability"
 name: "femaSocialVulnerability"
-description: "including disproportionate death", "The susceptibility of social groups to the adverse impacts of natural hazards", "or disruption of livelihood.", "injury", "loss"
+description: "including disproportionate death", "The susceptibility of social groups to the adverse impacts of natural hazards", "loss", "injury", "or disruption of livelihood."
 typeOf: dcid:Property
 domainIncludes: dcid:NaturalHazardImpact
 
@@ -321,7 +321,7 @@ typeOf: dcid:StatisticalVariable
 Node: dcid:NaturalHazardImpact
 dcid: "NaturalHazardImpact"
 name: "NaturalHazardImpact"
-description: "imposed upon factors such as Buildings", "such as destruction or death", "Negative impacts", "People", "and Agriculture through occurrences of natural hazards."
+description: "and Agriculture through occurrences of natural hazards.", "imposed upon factors such as Buildings", "such as destruction or death", "Negative impacts", "People"
 typeOf: dcid:Class
 subClassOf: dcid:Intangible
 
@@ -399,7 +399,7 @@ Node: dcid:expectedLoss
 dcid: "expectedLoss"
 descriptionUrl: "https://hazards.fema.gov/nri/expected-annual-loss"
 name: "expectedLoss"
-description: "and agriculture)", "and in aggregate.", "people", "The estimated economic loss resulting from natural hazards. It quantifies loss for relevant consequence types (buildings"
+description: "The estimated economic loss resulting from natural hazards. It quantifies loss for relevant consequence types (buildings", "and in aggregate.", "people", "and agriculture)"
 typeOf: dcid:Property
 domainIncludes: dcid:NaturalHazardImpact
 

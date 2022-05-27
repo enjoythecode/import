@@ -3,9 +3,9 @@
     "LEVEL_INFO": {
       "counters": {
         "NumRowSuccesses": "3142",
-        "NumPVSuccesses": "1527012",
-        "Existence_NumChecks": "1521307",
-        "NumNodeSuccesses": "191662",
+        "NumPVSuccesses": "1483024",
+        "Existence_NumChecks": "1483603",
+        "NumNodeSuccesses": "185378",
         "Existence_NumDcCalls": "2"
       }
     }
