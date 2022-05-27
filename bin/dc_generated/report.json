@@ -5,8 +5,48 @@
         "Existence_NumChecks": "579",
         "Existence_NumDcCalls": "1"
       }
+    },
+    "LEVEL_WARNING": {
+      "counters": {
+        "Sanity_MultipleVals_value": "1"
+      }
+    },
+    "LEVEL_ERROR": {
+      "counters": {
+        "Sanity_MultipleVals_variableMeasured": "1"
+      }
+    },
+    "LEVEL_FATAL": {
+      "counters": {
+        "CSV_TmcfCheckFailure": "1"
+      }
     }
   },
+  "entries": [{
+    "level": "LEVEL_ERROR",
+    "location": {
+      "file": "fema_nri_counties.tmcf",
+      "lineNumber": "2"
+    },
+    "userMessage": "Found multiple values for single-value property :: property: 'variableMeasured', node: 'E:FEMA_NRI->E350'",
+    "counterKey": "Sanity_MultipleVals_variableMeasured"
+  }, {
+    "level": "LEVEL_WARNING",
+    "location": {
+      "file": "fema_nri_counties.tmcf",
+      "lineNumber": "2"
+    },
+    "userMessage": "Found multiple values for single-value property :: property: 'value', node: 'E:FEMA_NRI->E350'",
+    "counterKey": "Sanity_MultipleVals_value"
+  }, {
+    "level": "LEVEL_FATAL",
+    "location": {
+      "file": "fema_nri_counties.tmcf",
+      "lineNumber": "0"
+    },
+    "userMessage": "Found fatal sanity error in TMCF; check Sanity_ counter messages :: TMCF-file: fema_nri_counties.tmcf",
+    "counterKey": "CSV_TmcfCheckFailure"
+  }],
   "commandArgs": {
     "existenceChecks": true,
     "resolution": "RESOLUTION_MODE_LOCAL",

@@ -1,42 +1,43 @@
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact_HeatWaveEvent
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact_ColdWaveEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact_HeatWaveEvent"
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact_ColdWaveEvent"
 statType: dcid:measuredValue
-naturalHazardType: dcid:HeatWaveEvent
+naturalHazardType: dcid:ColdWaveEvent
 measuredProperty: dcid:expectedLoss
 measurementQualifier: dcid:Annual
 typeOf: dcid:StatisticalVariable
 
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact_TsunamiEvent
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact_LightningEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact_TsunamiEvent"
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact_LightningEvent"
 statType: dcid:measuredValue
-naturalHazardType: dcid:TsunamiEvent
+naturalHazardType: dcid:LightningEvent
 measuredProperty: dcid:expectedLoss
 measurementQualifier: dcid:Annual
-typeOf: dcid:StatisticalVariable
-
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact_VolcanicActivityEvent
-populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact_VolcanicActivityEvent"
-statType: dcid:measuredValue
-naturalHazardType: dcid:VolcanicActivityEvent
-measuredProperty: dcid:femaNaturalHazardRiskIndex
 typeOf: dcid:StatisticalVariable
 
 Node: dcid:femaCommunityResilience
 dcid: "femaCommunityResilience"
 descriptionUrl: "https://hazards.fema.gov/nri/community-resilience"
 name: "femaCommunityResilience"
-description: "adapt to changing conditions", "The ability of a community to prepare for anticipated natural hazards", "and withstand and recover rapidly from disruptions."
+description: "adapt to changing conditions", "and withstand and recover rapidly from disruptions.", "The ability of a community to prepare for anticipated natural hazards"
 typeOf: dcid:Property
 domainIncludes: dcid:NaturalHazardImpact
 
-Node: dcid:femaCommunityResilience_NaturalHazardImpact
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_HeatWaveEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "femaCommunityResilience_NaturalHazardImpact"
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact_HeatWaveEvent"
 statType: dcid:measuredValue
-measuredProperty: dcid:femaCommunityResilience
+naturalHazardType: dcid:HeatWaveEvent
+measuredProperty: dcid:femaNaturalHazardRiskIndex
+typeOf: dcid:StatisticalVariable
+
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_RiverineFloodingEvent
+populationType: dcid:NaturalHazardImpact
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact_RiverineFloodingEvent"
+statType: dcid:measuredValue
+naturalHazardType: dcid:RiverineFloodingEvent
+measuredProperty: dcid:femaNaturalHazardRiskIndex
 typeOf: dcid:StatisticalVariable
 
 Node: dcid:RiverineFloodingEvent
@@ -45,75 +46,52 @@ name: "RiverineFloodingEvent"
 typeOf: dcid:Class
 subClassOf: dcid:Event
 
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_HailEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact"
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact_HailEvent"
 statType: dcid:measuredValue
+naturalHazardType: dcid:HailEvent
+measuredProperty: dcid:femaNaturalHazardRiskIndex
+typeOf: dcid:StatisticalVariable
+
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact_TsunamiEvent
+populationType: dcid:NaturalHazardImpact
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact_TsunamiEvent"
+statType: dcid:measuredValue
+naturalHazardType: dcid:TsunamiEvent
 measuredProperty: dcid:expectedLoss
 measurementQualifier: dcid:Annual
 typeOf: dcid:StatisticalVariable
 
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact_HurricaneEvent
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_HurricaneEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact_HurricaneEvent"
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact_HurricaneEvent"
 statType: dcid:measuredValue
 naturalHazardType: dcid:HurricaneEvent
 measuredProperty: dcid:femaNaturalHazardRiskIndex
 typeOf: dcid:StatisticalVariable
 
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact_WinterWeatherEvent
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_TornadoEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact_WinterWeatherEvent"
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact_TornadoEvent"
 statType: dcid:measuredValue
-naturalHazardType: dcid:WinterWeatherEvent
+naturalHazardType: dcid:TornadoEvent
 measuredProperty: dcid:femaNaturalHazardRiskIndex
 typeOf: dcid:StatisticalVariable
 
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_StrongWindEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact"
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact_StrongWindEvent"
 statType: dcid:measuredValue
+naturalHazardType: dcid:StrongWindEvent
 measuredProperty: dcid:femaNaturalHazardRiskIndex
 typeOf: dcid:StatisticalVariable
 
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact_CoastalFloodEvent
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact_CoastalFloodEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact_CoastalFloodEvent"
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact_CoastalFloodEvent"
 statType: dcid:measuredValue
 naturalHazardType: dcid:CoastalFloodEvent
-measuredProperty: dcid:femaNaturalHazardRiskIndex
-typeOf: dcid:StatisticalVariable
-
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact_LandslideEvent
-populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact_LandslideEvent"
-statType: dcid:measuredValue
-naturalHazardType: dcid:LandslideEvent
-measuredProperty: dcid:expectedLoss
-measurementQualifier: dcid:Annual
-typeOf: dcid:StatisticalVariable
-
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact_TsunamiEvent
-populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact_TsunamiEvent"
-statType: dcid:measuredValue
-naturalHazardType: dcid:TsunamiEvent
-measuredProperty: dcid:femaNaturalHazardRiskIndex
-typeOf: dcid:StatisticalVariable
-
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact_LightningEvent
-populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact_LightningEvent"
-statType: dcid:measuredValue
-naturalHazardType: dcid:LightningEvent
-measuredProperty: dcid:femaNaturalHazardRiskIndex
-typeOf: dcid:StatisticalVariable
-
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact_WinterWeatherEvent
-populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact_WinterWeatherEvent"
-statType: dcid:measuredValue
-naturalHazardType: dcid:WinterWeatherEvent
 measuredProperty: dcid:expectedLoss
 measurementQualifier: dcid:Annual
 typeOf: dcid:StatisticalVariable
@@ -126,54 +104,36 @@ description: "The potential for negative impacts as a result of a natural hazard
 typeOf: dcid:Property
 domainIncludes: dcid:NaturalHazardImpact
 
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact_HailEvent
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact_EarthquakeEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact_HailEvent"
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact_EarthquakeEvent"
 statType: dcid:measuredValue
-naturalHazardType: dcid:HailEvent
-measuredProperty: dcid:femaNaturalHazardRiskIndex
-typeOf: dcid:StatisticalVariable
-
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact_LightningEvent
-populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact_LightningEvent"
-statType: dcid:measuredValue
-naturalHazardType: dcid:LightningEvent
+naturalHazardType: dcid:EarthquakeEvent
 measuredProperty: dcid:expectedLoss
 measurementQualifier: dcid:Annual
 typeOf: dcid:StatisticalVariable
 
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact_TornadoEvent
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact
 populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact_TornadoEvent"
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact"
 statType: dcid:measuredValue
-naturalHazardType: dcid:TornadoEvent
 measuredProperty: dcid:femaNaturalHazardRiskIndex
 typeOf: dcid:StatisticalVariable
 
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact_RiverineFloodingEvent
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact_HurricaneEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact_RiverineFloodingEvent"
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact_HurricaneEvent"
 statType: dcid:measuredValue
-naturalHazardType: dcid:RiverineFloodingEvent
-measuredProperty: dcid:femaNaturalHazardRiskIndex
-typeOf: dcid:StatisticalVariable
-
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact_VolcanicActivityEvent
-populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact_VolcanicActivityEvent"
-statType: dcid:measuredValue
-naturalHazardType: dcid:VolcanicActivityEvent
+naturalHazardType: dcid:HurricaneEvent
 measuredProperty: dcid:expectedLoss
 measurementQualifier: dcid:Annual
 typeOf: dcid:StatisticalVariable
 
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact_HeatWaveEvent
+Node: dcid:FemaSocialVulnerability_NaturalHazardImpact
 populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact_HeatWaveEvent"
+dcid: "FemaSocialVulnerability_NaturalHazardImpact"
 statType: dcid:measuredValue
-naturalHazardType: dcid:HeatWaveEvent
-measuredProperty: dcid:femaNaturalHazardRiskIndex
+measuredProperty: dcid:femaSocialVulnerability
 typeOf: dcid:StatisticalVariable
 
 Node: dcid:VolcanicActivityEvent
@@ -182,134 +142,131 @@ name: "VolcanicActivityEvent"
 typeOf: dcid:Class
 subClassOf: dcid:Event
 
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact_EarthquakeEvent
-populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact_EarthquakeEvent"
-statType: dcid:measuredValue
-naturalHazardType: dcid:EarthquakeEvent
-measuredProperty: dcid:femaNaturalHazardRiskIndex
-typeOf: dcid:StatisticalVariable
-
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact_DroughtEvent
-populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact_DroughtEvent"
-statType: dcid:measuredValue
-naturalHazardType: dcid:DroughtEvent
-measuredProperty: dcid:expectedLoss
-measurementQualifier: dcid:Annual
-typeOf: dcid:StatisticalVariable
-
 Node: dcid:HeatWaveEvent
 dcid: "HeatWaveEvent"
 name: "HeatWaveEvent"
 typeOf: dcid:Class
 subClassOf: dcid:MeteorologicalEvent
 
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact_StrongWindEvent
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact_TornadoEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact_StrongWindEvent"
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact_TornadoEvent"
 statType: dcid:measuredValue
-naturalHazardType: dcid:StrongWindEvent
+naturalHazardType: dcid:TornadoEvent
 measuredProperty: dcid:expectedLoss
 measurementQualifier: dcid:Annual
 typeOf: dcid:StatisticalVariable
 
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact_IceStormEvent
+Node: dcid:FemaCommunityResilience_NaturalHazardImpact
 populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact_IceStormEvent"
+dcid: "FemaCommunityResilience_NaturalHazardImpact"
+statType: dcid:measuredValue
+measuredProperty: dcid:femaCommunityResilience
+typeOf: dcid:StatisticalVariable
+
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_AvalancheEvent
+populationType: dcid:NaturalHazardImpact
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact_AvalancheEvent"
+statType: dcid:measuredValue
+naturalHazardType: dcid:AvalancheEvent
+measuredProperty: dcid:femaNaturalHazardRiskIndex
+typeOf: dcid:StatisticalVariable
+
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_IceStormEvent
+populationType: dcid:NaturalHazardImpact
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact_IceStormEvent"
 statType: dcid:measuredValue
 naturalHazardType: dcid:IceStormEvent
-measuredProperty: dcid:expectedLoss
-measurementQualifier: dcid:Annual
+measuredProperty: dcid:femaNaturalHazardRiskIndex
 typeOf: dcid:StatisticalVariable
 
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact_WildfireEvent
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact_WinterWeatherEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact_WildfireEvent"
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact_WinterWeatherEvent"
 statType: dcid:measuredValue
-naturalHazardType: dcid:WildfireEvent
-measuredProperty: dcid:femaNaturalHazardRiskIndex
+naturalHazardType: dcid:WinterWeatherEvent
+measuredProperty: dcid:expectedLoss
+measurementQualifier: dcid:Annual
 typeOf: dcid:StatisticalVariable
 
 Node: dcid:FemaNationalRiskScore
 dcid: "FemaNationalRiskScore"
 name: "FemaNationalRiskScore"
 descriptionUrl: "https://hazards.fema.gov/nri/understanding-scores-ratings"
-description: "A unit describing the relative risk from natural hazards that a place is estimated to be", "where 0 is the least at risk", "according to the FEMA National Risk Index study. Ranging from 0 to 100", "and 100 is the most at risk."
+description: "A unit describing the relative risk from natural hazards that a place is estimated to be", "where 0 is the least at risk", "and 100 is the most at risk.", "according to the FEMA National Risk Index study. Ranging from 0 to 100"
 typeOf: dcid:UnitOfMeasure
 
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact_AvalancheEvent
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_WinterWeatherEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact_AvalancheEvent"
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact_WinterWeatherEvent"
 statType: dcid:measuredValue
-naturalHazardType: dcid:AvalancheEvent
+naturalHazardType: dcid:WinterWeatherEvent
 measuredProperty: dcid:femaNaturalHazardRiskIndex
 typeOf: dcid:StatisticalVariable
 
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact_HurricaneEvent
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_EarthquakeEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact_HurricaneEvent"
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact_EarthquakeEvent"
 statType: dcid:measuredValue
-naturalHazardType: dcid:HurricaneEvent
+naturalHazardType: dcid:EarthquakeEvent
+measuredProperty: dcid:femaNaturalHazardRiskIndex
+typeOf: dcid:StatisticalVariable
+
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact_IceStormEvent
+populationType: dcid:NaturalHazardImpact
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact_IceStormEvent"
+statType: dcid:measuredValue
+naturalHazardType: dcid:IceStormEvent
 measuredProperty: dcid:expectedLoss
 measurementQualifier: dcid:Annual
 typeOf: dcid:StatisticalVariable
 
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact_WildfireEvent
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_DroughtEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact_WildfireEvent"
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact_DroughtEvent"
+statType: dcid:measuredValue
+naturalHazardType: dcid:DroughtEvent
+measuredProperty: dcid:femaNaturalHazardRiskIndex
+typeOf: dcid:StatisticalVariable
+
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_WildfireEvent
+populationType: dcid:NaturalHazardImpact
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact_WildfireEvent"
 statType: dcid:measuredValue
 naturalHazardType: dcid:WildfireEvent
+measuredProperty: dcid:femaNaturalHazardRiskIndex
+typeOf: dcid:StatisticalVariable
+
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact_AvalancheEvent
+populationType: dcid:NaturalHazardImpact
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact_AvalancheEvent"
+statType: dcid:measuredValue
+naturalHazardType: dcid:AvalancheEvent
 measuredProperty: dcid:expectedLoss
 measurementQualifier: dcid:Annual
 typeOf: dcid:StatisticalVariable
 
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact_LandslideEvent
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_CoastalFloodEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact_LandslideEvent"
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact_CoastalFloodEvent"
+statType: dcid:measuredValue
+naturalHazardType: dcid:CoastalFloodEvent
+measuredProperty: dcid:femaNaturalHazardRiskIndex
+typeOf: dcid:StatisticalVariable
+
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_LandslideEvent
+populationType: dcid:NaturalHazardImpact
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact_LandslideEvent"
 statType: dcid:measuredValue
 naturalHazardType: dcid:LandslideEvent
 measuredProperty: dcid:femaNaturalHazardRiskIndex
-typeOf: dcid:StatisticalVariable
-
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact_RiverineFloodingEvent
-populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact_RiverineFloodingEvent"
-statType: dcid:measuredValue
-naturalHazardType: dcid:RiverineFloodingEvent
-measuredProperty: dcid:expectedLoss
-measurementQualifier: dcid:Annual
-typeOf: dcid:StatisticalVariable
-
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact_CoastalFloodEvent
-populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact_CoastalFloodEvent"
-statType: dcid:measuredValue
-naturalHazardType: dcid:CoastalFloodEvent
-measuredProperty: dcid:expectedLoss
-measurementQualifier: dcid:Annual
-typeOf: dcid:StatisticalVariable
-
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact_ColdWaveEvent
-populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact_ColdWaveEvent"
-statType: dcid:measuredValue
-naturalHazardType: dcid:ColdWaveEvent
-measuredProperty: dcid:femaNaturalHazardRiskIndex
-typeOf: dcid:StatisticalVariable
-
-Node: dcid:femaSocialVulnerability_NaturalHazardImpact
-populationType: dcid:NaturalHazardImpact
-dcid: "femaSocialVulnerability_NaturalHazardImpact"
-statType: dcid:measuredValue
-measuredProperty: dcid:femaSocialVulnerability
 typeOf: dcid:StatisticalVariable
 
 Node: dcid:femaSocialVulnerability
 dcid: "femaSocialVulnerability"
 descriptionUrl: "https://hazards.fema.gov/nri/social-vulnerability"
 name: "femaSocialVulnerability"
-description: "including disproportionate death", "The susceptibility of social groups to the adverse impacts of natural hazards", "or disruption of livelihood.", "injury", "loss"
+description: "including disproportionate death", "injury", "loss", "or disruption of livelihood.", "The susceptibility of social groups to the adverse impacts of natural hazards"
 typeOf: dcid:Property
 domainIncludes: dcid:NaturalHazardImpact
 
@@ -319,36 +276,44 @@ name: "ColdWaveEvent"
 typeOf: dcid:Class
 subClassOf: dcid:MeteorologicalEvent
 
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact_StrongWindEvent
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_TsunamiEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact_StrongWindEvent"
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact_TsunamiEvent"
 statType: dcid:measuredValue
-naturalHazardType: dcid:StrongWindEvent
+naturalHazardType: dcid:TsunamiEvent
 measuredProperty: dcid:femaNaturalHazardRiskIndex
 typeOf: dcid:StatisticalVariable
 
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact_IceStormEvent
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_VolcanicActivityEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact_IceStormEvent"
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact_VolcanicActivityEvent"
 statType: dcid:measuredValue
-naturalHazardType: dcid:IceStormEvent
+naturalHazardType: dcid:VolcanicActivityEvent
 measuredProperty: dcid:femaNaturalHazardRiskIndex
 typeOf: dcid:StatisticalVariable
 
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact_TornadoEvent
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact_WildfireEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact_TornadoEvent"
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact_WildfireEvent"
 statType: dcid:measuredValue
-naturalHazardType: dcid:TornadoEvent
+naturalHazardType: dcid:WildfireEvent
 measuredProperty: dcid:expectedLoss
 measurementQualifier: dcid:Annual
 typeOf: dcid:StatisticalVariable
 
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact_EarthquakeEvent
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_LightningEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact_EarthquakeEvent"
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact_LightningEvent"
 statType: dcid:measuredValue
-naturalHazardType: dcid:EarthquakeEvent
+naturalHazardType: dcid:LightningEvent
+measuredProperty: dcid:femaNaturalHazardRiskIndex
+typeOf: dcid:StatisticalVariable
+
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact_DroughtEvent
+populationType: dcid:NaturalHazardImpact
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact_DroughtEvent"
+statType: dcid:measuredValue
+naturalHazardType: dcid:DroughtEvent
 measuredProperty: dcid:expectedLoss
 measurementQualifier: dcid:Annual
 typeOf: dcid:StatisticalVariable
@@ -356,50 +321,85 @@ typeOf: dcid:StatisticalVariable
 Node: dcid:NaturalHazardImpact
 dcid: "NaturalHazardImpact"
 name: "NaturalHazardImpact"
-description: "imposed upon factors such as Buildings", "such as destruction or death", "Negative impacts", "People", "and Agriculture through occurrences of natural hazards."
+description: "such as destruction or death", "Negative impacts", "People", "and Agriculture through occurrences of natural hazards.", "imposed upon factors such as Buildings"
 typeOf: dcid:Class
 subClassOf: dcid:Intangible
 
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact_ColdWaveEvent
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact_LandslideEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact_ColdWaveEvent"
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact_LandslideEvent"
 statType: dcid:measuredValue
-naturalHazardType: dcid:ColdWaveEvent
+naturalHazardType: dcid:LandslideEvent
 measuredProperty: dcid:expectedLoss
 measurementQualifier: dcid:Annual
 typeOf: dcid:StatisticalVariable
 
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact_HailEvent
+Node: dcid:FemaNaturalHazardRiskIndex_NaturalHazardImpact_ColdWaveEvent
 populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact_HailEvent"
+dcid: "FemaNaturalHazardRiskIndex_NaturalHazardImpact_ColdWaveEvent"
+statType: dcid:measuredValue
+naturalHazardType: dcid:ColdWaveEvent
+measuredProperty: dcid:femaNaturalHazardRiskIndex
+typeOf: dcid:StatisticalVariable
+
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact_HeatWaveEvent
+populationType: dcid:NaturalHazardImpact
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact_HeatWaveEvent"
+statType: dcid:measuredValue
+naturalHazardType: dcid:HeatWaveEvent
+measuredProperty: dcid:expectedLoss
+measurementQualifier: dcid:Annual
+typeOf: dcid:StatisticalVariable
+
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact_StrongWindEvent
+populationType: dcid:NaturalHazardImpact
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact_StrongWindEvent"
+statType: dcid:measuredValue
+naturalHazardType: dcid:StrongWindEvent
+measuredProperty: dcid:expectedLoss
+measurementQualifier: dcid:Annual
+typeOf: dcid:StatisticalVariable
+
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact
+populationType: dcid:NaturalHazardImpact
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact"
+statType: dcid:measuredValue
+measuredProperty: dcid:expectedLoss
+measurementQualifier: dcid:Annual
+typeOf: dcid:StatisticalVariable
+
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact_VolcanicActivityEvent
+populationType: dcid:NaturalHazardImpact
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact_VolcanicActivityEvent"
+statType: dcid:measuredValue
+naturalHazardType: dcid:VolcanicActivityEvent
+measuredProperty: dcid:expectedLoss
+measurementQualifier: dcid:Annual
+typeOf: dcid:StatisticalVariable
+
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact_RiverineFloodingEvent
+populationType: dcid:NaturalHazardImpact
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact_RiverineFloodingEvent"
+statType: dcid:measuredValue
+naturalHazardType: dcid:RiverineFloodingEvent
+measuredProperty: dcid:expectedLoss
+measurementQualifier: dcid:Annual
+typeOf: dcid:StatisticalVariable
+
+Node: dcid:Annual_ExpectedLoss_NaturalHazardImpact_HailEvent
+populationType: dcid:NaturalHazardImpact
+dcid: "Annual_ExpectedLoss_NaturalHazardImpact_HailEvent"
 statType: dcid:measuredValue
 naturalHazardType: dcid:HailEvent
 measuredProperty: dcid:expectedLoss
 measurementQualifier: dcid:Annual
 typeOf: dcid:StatisticalVariable
 
-Node: dcid:Annual_expectedLoss_NaturalHazardImpact_AvalancheEvent
-populationType: dcid:NaturalHazardImpact
-dcid: "Annual_expectedLoss_NaturalHazardImpact_AvalancheEvent"
-statType: dcid:measuredValue
-naturalHazardType: dcid:AvalancheEvent
-measuredProperty: dcid:expectedLoss
-measurementQualifier: dcid:Annual
-typeOf: dcid:StatisticalVariable
-
-Node: dcid:femaNaturalHazardRiskIndex_NaturalHazardImpact_DroughtEvent
-populationType: dcid:NaturalHazardImpact
-dcid: "femaNaturalHazardRiskIndex_NaturalHazardImpact_DroughtEvent"
-statType: dcid:measuredValue
-naturalHazardType: dcid:DroughtEvent
-measuredProperty: dcid:femaNaturalHazardRiskIndex
-typeOf: dcid:StatisticalVariable
-
 Node: dcid:expectedLoss
 dcid: "expectedLoss"
 descriptionUrl: "https://hazards.fema.gov/nri/expected-annual-loss"
 name: "expectedLoss"
-description: "and agriculture)", "and in aggregate.", "people", "The estimated economic loss resulting from natural hazards. It quantifies loss for relevant consequence types (buildings"
+description: "and agriculture)", "people", "The estimated economic loss resulting from natural hazards. It quantifies loss for relevant consequence types (buildings", "and in aggregate."
 typeOf: dcid:Property
 domainIncludes: dcid:NaturalHazardImpact
 
