@@ -92,11 +92,26 @@ message DataPoint {
         optional double value = 1;
         // The location in the file where this value was read from.
         repeated Log.Location locations = 2;
+        oneof value_oneof {
+                DataValueNumber valueNumber = 3;
+                DataValueText valueText = 4;
+                DataValueReference valueReference = 5;
+        }
     }
 
     optional string date = 1;
     // Multiple values for a single date only happens when there's a bug.
     repeated DataValue values = 2;
+
+    message DataValueNumber {
+        optional double value = 1;
+    }
+    message DataValueText {
+        optional string value = 1;
+    }
+    message DataValueReference {
+        optional string value = 1;
+    }
 }
 
 message StatValidationResult {

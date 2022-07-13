@@ -6929,6 +6929,59 @@ public final class Debug {
        * <code>repeated .org.datacommons.proto.Log.Location locations = 2;</code>
        */
       org.datacommons.proto.Debug.Log.LocationOrBuilder getLocationsOrBuilder(int index);
+
+      /**
+       * <code>optional .org.datacommons.proto.DataPoint.DataValueNumber valueNumber = 3;</code>
+       *
+       * @return Whether the valueNumber field is set.
+       */
+      boolean hasValueNumber();
+      /**
+       * <code>optional .org.datacommons.proto.DataPoint.DataValueNumber valueNumber = 3;</code>
+       *
+       * @return The valueNumber.
+       */
+      org.datacommons.proto.Debug.DataPoint.DataValueNumber getValueNumber();
+      /** <code>optional .org.datacommons.proto.DataPoint.DataValueNumber valueNumber = 3;</code> */
+      org.datacommons.proto.Debug.DataPoint.DataValueNumberOrBuilder getValueNumberOrBuilder();
+
+      /**
+       * <code>optional .org.datacommons.proto.DataPoint.DataValueText valueText = 4;</code>
+       *
+       * @return Whether the valueText field is set.
+       */
+      boolean hasValueText();
+      /**
+       * <code>optional .org.datacommons.proto.DataPoint.DataValueText valueText = 4;</code>
+       *
+       * @return The valueText.
+       */
+      org.datacommons.proto.Debug.DataPoint.DataValueText getValueText();
+      /** <code>optional .org.datacommons.proto.DataPoint.DataValueText valueText = 4;</code> */
+      org.datacommons.proto.Debug.DataPoint.DataValueTextOrBuilder getValueTextOrBuilder();
+
+      /**
+       * <code>optional .org.datacommons.proto.DataPoint.DataValueReference valueReference = 5;
+       * </code>
+       *
+       * @return Whether the valueReference field is set.
+       */
+      boolean hasValueReference();
+      /**
+       * <code>optional .org.datacommons.proto.DataPoint.DataValueReference valueReference = 5;
+       * </code>
+       *
+       * @return The valueReference.
+       */
+      org.datacommons.proto.Debug.DataPoint.DataValueReference getValueReference();
+      /**
+       * <code>optional .org.datacommons.proto.DataPoint.DataValueReference valueReference = 5;
+       * </code>
+       */
+      org.datacommons.proto.Debug.DataPoint.DataValueReferenceOrBuilder
+          getValueReferenceOrBuilder();
+
+      public org.datacommons.proto.Debug.DataPoint.DataValue.ValueOneofCase getValueOneofCase();
     }
     /** Protobuf type {@code org.datacommons.proto.DataPoint.DataValue} */
     public static final class DataValue extends com.google.protobuf.GeneratedMessageV3
@@ -6993,6 +7046,67 @@ public final class Debug {
                           org.datacommons.proto.Debug.Log.Location.PARSER, extensionRegistry));
                   break;
                 }
+              case 26:
+                {
+                  org.datacommons.proto.Debug.DataPoint.DataValueNumber.Builder subBuilder = null;
+                  if (valueOneofCase_ == 3) {
+                    subBuilder =
+                        ((org.datacommons.proto.Debug.DataPoint.DataValueNumber) valueOneof_)
+                            .toBuilder();
+                  }
+                  valueOneof_ =
+                      input.readMessage(
+                          org.datacommons.proto.Debug.DataPoint.DataValueNumber.PARSER,
+                          extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(
+                        (org.datacommons.proto.Debug.DataPoint.DataValueNumber) valueOneof_);
+                    valueOneof_ = subBuilder.buildPartial();
+                  }
+                  valueOneofCase_ = 3;
+                  break;
+                }
+              case 34:
+                {
+                  org.datacommons.proto.Debug.DataPoint.DataValueText.Builder subBuilder = null;
+                  if (valueOneofCase_ == 4) {
+                    subBuilder =
+                        ((org.datacommons.proto.Debug.DataPoint.DataValueText) valueOneof_)
+                            .toBuilder();
+                  }
+                  valueOneof_ =
+                      input.readMessage(
+                          org.datacommons.proto.Debug.DataPoint.DataValueText.PARSER,
+                          extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(
+                        (org.datacommons.proto.Debug.DataPoint.DataValueText) valueOneof_);
+                    valueOneof_ = subBuilder.buildPartial();
+                  }
+                  valueOneofCase_ = 4;
+                  break;
+                }
+              case 42:
+                {
+                  org.datacommons.proto.Debug.DataPoint.DataValueReference.Builder subBuilder =
+                      null;
+                  if (valueOneofCase_ == 5) {
+                    subBuilder =
+                        ((org.datacommons.proto.Debug.DataPoint.DataValueReference) valueOneof_)
+                            .toBuilder();
+                  }
+                  valueOneof_ =
+                      input.readMessage(
+                          org.datacommons.proto.Debug.DataPoint.DataValueReference.PARSER,
+                          extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(
+                        (org.datacommons.proto.Debug.DataPoint.DataValueReference) valueOneof_);
+                    valueOneof_ = subBuilder.buildPartial();
+                  }
+                  valueOneofCase_ = 5;
+                  break;
+                }
               default:
                 {
                   if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
@@ -7032,6 +7146,56 @@ public final class Debug {
       }
 
       private int bitField0_;
+      private int valueOneofCase_ = 0;
+      private java.lang.Object valueOneof_;
+
+      public enum ValueOneofCase
+          implements
+              com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        VALUENUMBER(3),
+        VALUETEXT(4),
+        VALUEREFERENCE(5),
+        VALUEONEOF_NOT_SET(0);
+        private final int value;
+
+        private ValueOneofCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static ValueOneofCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static ValueOneofCase forNumber(int value) {
+          switch (value) {
+            case 3:
+              return VALUENUMBER;
+            case 4:
+              return VALUETEXT;
+            case 5:
+              return VALUEREFERENCE;
+            case 0:
+              return VALUEONEOF_NOT_SET;
+            default:
+              return null;
+          }
+        }
+
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public ValueOneofCase getValueOneofCase() {
+        return ValueOneofCase.forNumber(valueOneofCase_);
+      }
+
       public static final int VALUE_FIELD_NUMBER = 1;
       private double value_;
       /**
@@ -7115,6 +7279,97 @@ public final class Debug {
         return locations_.get(index);
       }
 
+      public static final int VALUENUMBER_FIELD_NUMBER = 3;
+      /**
+       * <code>optional .org.datacommons.proto.DataPoint.DataValueNumber valueNumber = 3;</code>
+       *
+       * @return Whether the valueNumber field is set.
+       */
+      public boolean hasValueNumber() {
+        return valueOneofCase_ == 3;
+      }
+      /**
+       * <code>optional .org.datacommons.proto.DataPoint.DataValueNumber valueNumber = 3;</code>
+       *
+       * @return The valueNumber.
+       */
+      public org.datacommons.proto.Debug.DataPoint.DataValueNumber getValueNumber() {
+        if (valueOneofCase_ == 3) {
+          return (org.datacommons.proto.Debug.DataPoint.DataValueNumber) valueOneof_;
+        }
+        return org.datacommons.proto.Debug.DataPoint.DataValueNumber.getDefaultInstance();
+      }
+      /** <code>optional .org.datacommons.proto.DataPoint.DataValueNumber valueNumber = 3;</code> */
+      public org.datacommons.proto.Debug.DataPoint.DataValueNumberOrBuilder
+          getValueNumberOrBuilder() {
+        if (valueOneofCase_ == 3) {
+          return (org.datacommons.proto.Debug.DataPoint.DataValueNumber) valueOneof_;
+        }
+        return org.datacommons.proto.Debug.DataPoint.DataValueNumber.getDefaultInstance();
+      }
+
+      public static final int VALUETEXT_FIELD_NUMBER = 4;
+      /**
+       * <code>optional .org.datacommons.proto.DataPoint.DataValueText valueText = 4;</code>
+       *
+       * @return Whether the valueText field is set.
+       */
+      public boolean hasValueText() {
+        return valueOneofCase_ == 4;
+      }
+      /**
+       * <code>optional .org.datacommons.proto.DataPoint.DataValueText valueText = 4;</code>
+       *
+       * @return The valueText.
+       */
+      public org.datacommons.proto.Debug.DataPoint.DataValueText getValueText() {
+        if (valueOneofCase_ == 4) {
+          return (org.datacommons.proto.Debug.DataPoint.DataValueText) valueOneof_;
+        }
+        return org.datacommons.proto.Debug.DataPoint.DataValueText.getDefaultInstance();
+      }
+      /** <code>optional .org.datacommons.proto.DataPoint.DataValueText valueText = 4;</code> */
+      public org.datacommons.proto.Debug.DataPoint.DataValueTextOrBuilder getValueTextOrBuilder() {
+        if (valueOneofCase_ == 4) {
+          return (org.datacommons.proto.Debug.DataPoint.DataValueText) valueOneof_;
+        }
+        return org.datacommons.proto.Debug.DataPoint.DataValueText.getDefaultInstance();
+      }
+
+      public static final int VALUEREFERENCE_FIELD_NUMBER = 5;
+      /**
+       * <code>optional .org.datacommons.proto.DataPoint.DataValueReference valueReference = 5;
+       * </code>
+       *
+       * @return Whether the valueReference field is set.
+       */
+      public boolean hasValueReference() {
+        return valueOneofCase_ == 5;
+      }
+      /**
+       * <code>optional .org.datacommons.proto.DataPoint.DataValueReference valueReference = 5;
+       * </code>
+       *
+       * @return The valueReference.
+       */
+      public org.datacommons.proto.Debug.DataPoint.DataValueReference getValueReference() {
+        if (valueOneofCase_ == 5) {
+          return (org.datacommons.proto.Debug.DataPoint.DataValueReference) valueOneof_;
+        }
+        return org.datacommons.proto.Debug.DataPoint.DataValueReference.getDefaultInstance();
+      }
+      /**
+       * <code>optional .org.datacommons.proto.DataPoint.DataValueReference valueReference = 5;
+       * </code>
+       */
+      public org.datacommons.proto.Debug.DataPoint.DataValueReferenceOrBuilder
+          getValueReferenceOrBuilder() {
+        if (valueOneofCase_ == 5) {
+          return (org.datacommons.proto.Debug.DataPoint.DataValueReference) valueOneof_;
+        }
+        return org.datacommons.proto.Debug.DataPoint.DataValueReference.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
 
       @java.lang.Override
@@ -7135,6 +7390,17 @@ public final class Debug {
         for (int i = 0; i < locations_.size(); i++) {
           output.writeMessage(2, locations_.get(i));
         }
+        if (valueOneofCase_ == 3) {
+          output.writeMessage(
+              3, (org.datacommons.proto.Debug.DataPoint.DataValueNumber) valueOneof_);
+        }
+        if (valueOneofCase_ == 4) {
+          output.writeMessage(4, (org.datacommons.proto.Debug.DataPoint.DataValueText) valueOneof_);
+        }
+        if (valueOneofCase_ == 5) {
+          output.writeMessage(
+              5, (org.datacommons.proto.Debug.DataPoint.DataValueReference) valueOneof_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -7149,6 +7415,21 @@ public final class Debug {
         }
         for (int i = 0; i < locations_.size(); i++) {
           size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, locations_.get(i));
+        }
+        if (valueOneofCase_ == 3) {
+          size +=
+              com.google.protobuf.CodedOutputStream.computeMessageSize(
+                  3, (org.datacommons.proto.Debug.DataPoint.DataValueNumber) valueOneof_);
+        }
+        if (valueOneofCase_ == 4) {
+          size +=
+              com.google.protobuf.CodedOutputStream.computeMessageSize(
+                  4, (org.datacommons.proto.Debug.DataPoint.DataValueText) valueOneof_);
+        }
+        if (valueOneofCase_ == 5) {
+          size +=
+              com.google.protobuf.CodedOutputStream.computeMessageSize(
+                  5, (org.datacommons.proto.Debug.DataPoint.DataValueReference) valueOneof_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -7172,6 +7453,20 @@ public final class Debug {
               != java.lang.Double.doubleToLongBits(other.getValue())) return false;
         }
         if (!getLocationsList().equals(other.getLocationsList())) return false;
+        if (!getValueOneofCase().equals(other.getValueOneofCase())) return false;
+        switch (valueOneofCase_) {
+          case 3:
+            if (!getValueNumber().equals(other.getValueNumber())) return false;
+            break;
+          case 4:
+            if (!getValueText().equals(other.getValueText())) return false;
+            break;
+          case 5:
+            if (!getValueReference().equals(other.getValueReference())) return false;
+            break;
+          case 0:
+          default:
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -7193,6 +7488,22 @@ public final class Debug {
         if (getLocationsCount() > 0) {
           hash = (37 * hash) + LOCATIONS_FIELD_NUMBER;
           hash = (53 * hash) + getLocationsList().hashCode();
+        }
+        switch (valueOneofCase_) {
+          case 3:
+            hash = (37 * hash) + VALUENUMBER_FIELD_NUMBER;
+            hash = (53 * hash) + getValueNumber().hashCode();
+            break;
+          case 4:
+            hash = (37 * hash) + VALUETEXT_FIELD_NUMBER;
+            hash = (53 * hash) + getValueText().hashCode();
+            break;
+          case 5:
+            hash = (37 * hash) + VALUEREFERENCE_FIELD_NUMBER;
+            hash = (53 * hash) + getValueReference().hashCode();
+            break;
+          case 0:
+          default:
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -7343,6 +7654,8 @@ public final class Debug {
           } else {
             locationsBuilder_.clear();
           }
+          valueOneofCase_ = 0;
+          valueOneof_ = null;
           return this;
         }
 
@@ -7385,7 +7698,29 @@ public final class Debug {
           } else {
             result.locations_ = locationsBuilder_.build();
           }
+          if (valueOneofCase_ == 3) {
+            if (valueNumberBuilder_ == null) {
+              result.valueOneof_ = valueOneof_;
+            } else {
+              result.valueOneof_ = valueNumberBuilder_.build();
+            }
+          }
+          if (valueOneofCase_ == 4) {
+            if (valueTextBuilder_ == null) {
+              result.valueOneof_ = valueOneof_;
+            } else {
+              result.valueOneof_ = valueTextBuilder_.build();
+            }
+          }
+          if (valueOneofCase_ == 5) {
+            if (valueReferenceBuilder_ == null) {
+              result.valueOneof_ = valueOneof_;
+            } else {
+              result.valueOneof_ = valueReferenceBuilder_.build();
+            }
+          }
           result.bitField0_ = to_bitField0_;
+          result.valueOneofCase_ = valueOneofCase_;
           onBuilt();
           return result;
         }
@@ -7468,6 +7803,27 @@ public final class Debug {
               }
             }
           }
+          switch (other.getValueOneofCase()) {
+            case VALUENUMBER:
+              {
+                mergeValueNumber(other.getValueNumber());
+                break;
+              }
+            case VALUETEXT:
+              {
+                mergeValueText(other.getValueText());
+                break;
+              }
+            case VALUEREFERENCE:
+              {
+                mergeValueReference(other.getValueReference());
+                break;
+              }
+            case VALUEONEOF_NOT_SET:
+              {
+                break;
+              }
+          }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -7495,6 +7851,20 @@ public final class Debug {
               mergeFrom(parsedMessage);
             }
           }
+          return this;
+        }
+
+        private int valueOneofCase_ = 0;
+        private java.lang.Object valueOneof_;
+
+        public ValueOneofCase getValueOneofCase() {
+          return ValueOneofCase.forNumber(valueOneofCase_);
+        }
+
+        public Builder clearValueOneof() {
+          valueOneofCase_ = 0;
+          valueOneof_ = null;
+          onChanged();
           return this;
         }
 
@@ -7895,6 +8265,472 @@ public final class Debug {
           return locationsBuilder_;
         }
 
+        private com.google.protobuf.SingleFieldBuilderV3<
+                org.datacommons.proto.Debug.DataPoint.DataValueNumber,
+                org.datacommons.proto.Debug.DataPoint.DataValueNumber.Builder,
+                org.datacommons.proto.Debug.DataPoint.DataValueNumberOrBuilder>
+            valueNumberBuilder_;
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueNumber valueNumber = 3;</code>
+         *
+         * @return Whether the valueNumber field is set.
+         */
+        public boolean hasValueNumber() {
+          return valueOneofCase_ == 3;
+        }
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueNumber valueNumber = 3;</code>
+         *
+         * @return The valueNumber.
+         */
+        public org.datacommons.proto.Debug.DataPoint.DataValueNumber getValueNumber() {
+          if (valueNumberBuilder_ == null) {
+            if (valueOneofCase_ == 3) {
+              return (org.datacommons.proto.Debug.DataPoint.DataValueNumber) valueOneof_;
+            }
+            return org.datacommons.proto.Debug.DataPoint.DataValueNumber.getDefaultInstance();
+          } else {
+            if (valueOneofCase_ == 3) {
+              return valueNumberBuilder_.getMessage();
+            }
+            return org.datacommons.proto.Debug.DataPoint.DataValueNumber.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueNumber valueNumber = 3;</code>
+         */
+        public Builder setValueNumber(org.datacommons.proto.Debug.DataPoint.DataValueNumber value) {
+          if (valueNumberBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            valueOneof_ = value;
+            onChanged();
+          } else {
+            valueNumberBuilder_.setMessage(value);
+          }
+          valueOneofCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueNumber valueNumber = 3;</code>
+         */
+        public Builder setValueNumber(
+            org.datacommons.proto.Debug.DataPoint.DataValueNumber.Builder builderForValue) {
+          if (valueNumberBuilder_ == null) {
+            valueOneof_ = builderForValue.build();
+            onChanged();
+          } else {
+            valueNumberBuilder_.setMessage(builderForValue.build());
+          }
+          valueOneofCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueNumber valueNumber = 3;</code>
+         */
+        public Builder mergeValueNumber(
+            org.datacommons.proto.Debug.DataPoint.DataValueNumber value) {
+          if (valueNumberBuilder_ == null) {
+            if (valueOneofCase_ == 3
+                && valueOneof_
+                    != org.datacommons.proto.Debug.DataPoint.DataValueNumber.getDefaultInstance()) {
+              valueOneof_ =
+                  org.datacommons.proto.Debug.DataPoint.DataValueNumber.newBuilder(
+                          (org.datacommons.proto.Debug.DataPoint.DataValueNumber) valueOneof_)
+                      .mergeFrom(value)
+                      .buildPartial();
+            } else {
+              valueOneof_ = value;
+            }
+            onChanged();
+          } else {
+            if (valueOneofCase_ == 3) {
+              valueNumberBuilder_.mergeFrom(value);
+            }
+            valueNumberBuilder_.setMessage(value);
+          }
+          valueOneofCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueNumber valueNumber = 3;</code>
+         */
+        public Builder clearValueNumber() {
+          if (valueNumberBuilder_ == null) {
+            if (valueOneofCase_ == 3) {
+              valueOneofCase_ = 0;
+              valueOneof_ = null;
+              onChanged();
+            }
+          } else {
+            if (valueOneofCase_ == 3) {
+              valueOneofCase_ = 0;
+              valueOneof_ = null;
+            }
+            valueNumberBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueNumber valueNumber = 3;</code>
+         */
+        public org.datacommons.proto.Debug.DataPoint.DataValueNumber.Builder
+            getValueNumberBuilder() {
+          return getValueNumberFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueNumber valueNumber = 3;</code>
+         */
+        public org.datacommons.proto.Debug.DataPoint.DataValueNumberOrBuilder
+            getValueNumberOrBuilder() {
+          if ((valueOneofCase_ == 3) && (valueNumberBuilder_ != null)) {
+            return valueNumberBuilder_.getMessageOrBuilder();
+          } else {
+            if (valueOneofCase_ == 3) {
+              return (org.datacommons.proto.Debug.DataPoint.DataValueNumber) valueOneof_;
+            }
+            return org.datacommons.proto.Debug.DataPoint.DataValueNumber.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueNumber valueNumber = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+                org.datacommons.proto.Debug.DataPoint.DataValueNumber,
+                org.datacommons.proto.Debug.DataPoint.DataValueNumber.Builder,
+                org.datacommons.proto.Debug.DataPoint.DataValueNumberOrBuilder>
+            getValueNumberFieldBuilder() {
+          if (valueNumberBuilder_ == null) {
+            if (!(valueOneofCase_ == 3)) {
+              valueOneof_ =
+                  org.datacommons.proto.Debug.DataPoint.DataValueNumber.getDefaultInstance();
+            }
+            valueNumberBuilder_ =
+                new com.google.protobuf.SingleFieldBuilderV3<
+                    org.datacommons.proto.Debug.DataPoint.DataValueNumber,
+                    org.datacommons.proto.Debug.DataPoint.DataValueNumber.Builder,
+                    org.datacommons.proto.Debug.DataPoint.DataValueNumberOrBuilder>(
+                    (org.datacommons.proto.Debug.DataPoint.DataValueNumber) valueOneof_,
+                    getParentForChildren(),
+                    isClean());
+            valueOneof_ = null;
+          }
+          valueOneofCase_ = 3;
+          onChanged();
+          ;
+          return valueNumberBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+                org.datacommons.proto.Debug.DataPoint.DataValueText,
+                org.datacommons.proto.Debug.DataPoint.DataValueText.Builder,
+                org.datacommons.proto.Debug.DataPoint.DataValueTextOrBuilder>
+            valueTextBuilder_;
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueText valueText = 4;</code>
+         *
+         * @return Whether the valueText field is set.
+         */
+        public boolean hasValueText() {
+          return valueOneofCase_ == 4;
+        }
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueText valueText = 4;</code>
+         *
+         * @return The valueText.
+         */
+        public org.datacommons.proto.Debug.DataPoint.DataValueText getValueText() {
+          if (valueTextBuilder_ == null) {
+            if (valueOneofCase_ == 4) {
+              return (org.datacommons.proto.Debug.DataPoint.DataValueText) valueOneof_;
+            }
+            return org.datacommons.proto.Debug.DataPoint.DataValueText.getDefaultInstance();
+          } else {
+            if (valueOneofCase_ == 4) {
+              return valueTextBuilder_.getMessage();
+            }
+            return org.datacommons.proto.Debug.DataPoint.DataValueText.getDefaultInstance();
+          }
+        }
+        /** <code>optional .org.datacommons.proto.DataPoint.DataValueText valueText = 4;</code> */
+        public Builder setValueText(org.datacommons.proto.Debug.DataPoint.DataValueText value) {
+          if (valueTextBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            valueOneof_ = value;
+            onChanged();
+          } else {
+            valueTextBuilder_.setMessage(value);
+          }
+          valueOneofCase_ = 4;
+          return this;
+        }
+        /** <code>optional .org.datacommons.proto.DataPoint.DataValueText valueText = 4;</code> */
+        public Builder setValueText(
+            org.datacommons.proto.Debug.DataPoint.DataValueText.Builder builderForValue) {
+          if (valueTextBuilder_ == null) {
+            valueOneof_ = builderForValue.build();
+            onChanged();
+          } else {
+            valueTextBuilder_.setMessage(builderForValue.build());
+          }
+          valueOneofCase_ = 4;
+          return this;
+        }
+        /** <code>optional .org.datacommons.proto.DataPoint.DataValueText valueText = 4;</code> */
+        public Builder mergeValueText(org.datacommons.proto.Debug.DataPoint.DataValueText value) {
+          if (valueTextBuilder_ == null) {
+            if (valueOneofCase_ == 4
+                && valueOneof_
+                    != org.datacommons.proto.Debug.DataPoint.DataValueText.getDefaultInstance()) {
+              valueOneof_ =
+                  org.datacommons.proto.Debug.DataPoint.DataValueText.newBuilder(
+                          (org.datacommons.proto.Debug.DataPoint.DataValueText) valueOneof_)
+                      .mergeFrom(value)
+                      .buildPartial();
+            } else {
+              valueOneof_ = value;
+            }
+            onChanged();
+          } else {
+            if (valueOneofCase_ == 4) {
+              valueTextBuilder_.mergeFrom(value);
+            }
+            valueTextBuilder_.setMessage(value);
+          }
+          valueOneofCase_ = 4;
+          return this;
+        }
+        /** <code>optional .org.datacommons.proto.DataPoint.DataValueText valueText = 4;</code> */
+        public Builder clearValueText() {
+          if (valueTextBuilder_ == null) {
+            if (valueOneofCase_ == 4) {
+              valueOneofCase_ = 0;
+              valueOneof_ = null;
+              onChanged();
+            }
+          } else {
+            if (valueOneofCase_ == 4) {
+              valueOneofCase_ = 0;
+              valueOneof_ = null;
+            }
+            valueTextBuilder_.clear();
+          }
+          return this;
+        }
+        /** <code>optional .org.datacommons.proto.DataPoint.DataValueText valueText = 4;</code> */
+        public org.datacommons.proto.Debug.DataPoint.DataValueText.Builder getValueTextBuilder() {
+          return getValueTextFieldBuilder().getBuilder();
+        }
+        /** <code>optional .org.datacommons.proto.DataPoint.DataValueText valueText = 4;</code> */
+        public org.datacommons.proto.Debug.DataPoint.DataValueTextOrBuilder
+            getValueTextOrBuilder() {
+          if ((valueOneofCase_ == 4) && (valueTextBuilder_ != null)) {
+            return valueTextBuilder_.getMessageOrBuilder();
+          } else {
+            if (valueOneofCase_ == 4) {
+              return (org.datacommons.proto.Debug.DataPoint.DataValueText) valueOneof_;
+            }
+            return org.datacommons.proto.Debug.DataPoint.DataValueText.getDefaultInstance();
+          }
+        }
+        /** <code>optional .org.datacommons.proto.DataPoint.DataValueText valueText = 4;</code> */
+        private com.google.protobuf.SingleFieldBuilderV3<
+                org.datacommons.proto.Debug.DataPoint.DataValueText,
+                org.datacommons.proto.Debug.DataPoint.DataValueText.Builder,
+                org.datacommons.proto.Debug.DataPoint.DataValueTextOrBuilder>
+            getValueTextFieldBuilder() {
+          if (valueTextBuilder_ == null) {
+            if (!(valueOneofCase_ == 4)) {
+              valueOneof_ =
+                  org.datacommons.proto.Debug.DataPoint.DataValueText.getDefaultInstance();
+            }
+            valueTextBuilder_ =
+                new com.google.protobuf.SingleFieldBuilderV3<
+                    org.datacommons.proto.Debug.DataPoint.DataValueText,
+                    org.datacommons.proto.Debug.DataPoint.DataValueText.Builder,
+                    org.datacommons.proto.Debug.DataPoint.DataValueTextOrBuilder>(
+                    (org.datacommons.proto.Debug.DataPoint.DataValueText) valueOneof_,
+                    getParentForChildren(),
+                    isClean());
+            valueOneof_ = null;
+          }
+          valueOneofCase_ = 4;
+          onChanged();
+          ;
+          return valueTextBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+                org.datacommons.proto.Debug.DataPoint.DataValueReference,
+                org.datacommons.proto.Debug.DataPoint.DataValueReference.Builder,
+                org.datacommons.proto.Debug.DataPoint.DataValueReferenceOrBuilder>
+            valueReferenceBuilder_;
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueReference valueReference = 5;
+         * </code>
+         *
+         * @return Whether the valueReference field is set.
+         */
+        public boolean hasValueReference() {
+          return valueOneofCase_ == 5;
+        }
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueReference valueReference = 5;
+         * </code>
+         *
+         * @return The valueReference.
+         */
+        public org.datacommons.proto.Debug.DataPoint.DataValueReference getValueReference() {
+          if (valueReferenceBuilder_ == null) {
+            if (valueOneofCase_ == 5) {
+              return (org.datacommons.proto.Debug.DataPoint.DataValueReference) valueOneof_;
+            }
+            return org.datacommons.proto.Debug.DataPoint.DataValueReference.getDefaultInstance();
+          } else {
+            if (valueOneofCase_ == 5) {
+              return valueReferenceBuilder_.getMessage();
+            }
+            return org.datacommons.proto.Debug.DataPoint.DataValueReference.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueReference valueReference = 5;
+         * </code>
+         */
+        public Builder setValueReference(
+            org.datacommons.proto.Debug.DataPoint.DataValueReference value) {
+          if (valueReferenceBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            valueOneof_ = value;
+            onChanged();
+          } else {
+            valueReferenceBuilder_.setMessage(value);
+          }
+          valueOneofCase_ = 5;
+          return this;
+        }
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueReference valueReference = 5;
+         * </code>
+         */
+        public Builder setValueReference(
+            org.datacommons.proto.Debug.DataPoint.DataValueReference.Builder builderForValue) {
+          if (valueReferenceBuilder_ == null) {
+            valueOneof_ = builderForValue.build();
+            onChanged();
+          } else {
+            valueReferenceBuilder_.setMessage(builderForValue.build());
+          }
+          valueOneofCase_ = 5;
+          return this;
+        }
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueReference valueReference = 5;
+         * </code>
+         */
+        public Builder mergeValueReference(
+            org.datacommons.proto.Debug.DataPoint.DataValueReference value) {
+          if (valueReferenceBuilder_ == null) {
+            if (valueOneofCase_ == 5
+                && valueOneof_
+                    != org.datacommons.proto.Debug.DataPoint.DataValueReference
+                        .getDefaultInstance()) {
+              valueOneof_ =
+                  org.datacommons.proto.Debug.DataPoint.DataValueReference.newBuilder(
+                          (org.datacommons.proto.Debug.DataPoint.DataValueReference) valueOneof_)
+                      .mergeFrom(value)
+                      .buildPartial();
+            } else {
+              valueOneof_ = value;
+            }
+            onChanged();
+          } else {
+            if (valueOneofCase_ == 5) {
+              valueReferenceBuilder_.mergeFrom(value);
+            }
+            valueReferenceBuilder_.setMessage(value);
+          }
+          valueOneofCase_ = 5;
+          return this;
+        }
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueReference valueReference = 5;
+         * </code>
+         */
+        public Builder clearValueReference() {
+          if (valueReferenceBuilder_ == null) {
+            if (valueOneofCase_ == 5) {
+              valueOneofCase_ = 0;
+              valueOneof_ = null;
+              onChanged();
+            }
+          } else {
+            if (valueOneofCase_ == 5) {
+              valueOneofCase_ = 0;
+              valueOneof_ = null;
+            }
+            valueReferenceBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueReference valueReference = 5;
+         * </code>
+         */
+        public org.datacommons.proto.Debug.DataPoint.DataValueReference.Builder
+            getValueReferenceBuilder() {
+          return getValueReferenceFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueReference valueReference = 5;
+         * </code>
+         */
+        public org.datacommons.proto.Debug.DataPoint.DataValueReferenceOrBuilder
+            getValueReferenceOrBuilder() {
+          if ((valueOneofCase_ == 5) && (valueReferenceBuilder_ != null)) {
+            return valueReferenceBuilder_.getMessageOrBuilder();
+          } else {
+            if (valueOneofCase_ == 5) {
+              return (org.datacommons.proto.Debug.DataPoint.DataValueReference) valueOneof_;
+            }
+            return org.datacommons.proto.Debug.DataPoint.DataValueReference.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>optional .org.datacommons.proto.DataPoint.DataValueReference valueReference = 5;
+         * </code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+                org.datacommons.proto.Debug.DataPoint.DataValueReference,
+                org.datacommons.proto.Debug.DataPoint.DataValueReference.Builder,
+                org.datacommons.proto.Debug.DataPoint.DataValueReferenceOrBuilder>
+            getValueReferenceFieldBuilder() {
+          if (valueReferenceBuilder_ == null) {
+            if (!(valueOneofCase_ == 5)) {
+              valueOneof_ =
+                  org.datacommons.proto.Debug.DataPoint.DataValueReference.getDefaultInstance();
+            }
+            valueReferenceBuilder_ =
+                new com.google.protobuf.SingleFieldBuilderV3<
+                    org.datacommons.proto.Debug.DataPoint.DataValueReference,
+                    org.datacommons.proto.Debug.DataPoint.DataValueReference.Builder,
+                    org.datacommons.proto.Debug.DataPoint.DataValueReferenceOrBuilder>(
+                    (org.datacommons.proto.Debug.DataPoint.DataValueReference) valueOneof_,
+                    getParentForChildren(),
+                    isClean());
+            valueOneof_ = null;
+          }
+          valueOneofCase_ = 5;
+          onChanged();
+          ;
+          return valueReferenceBuilder_;
+        }
+
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7944,6 +8780,1804 @@ public final class Debug {
 
       @java.lang.Override
       public org.datacommons.proto.Debug.DataPoint.DataValue getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+    }
+
+    public interface DataValueNumberOrBuilder
+        extends
+        // @@protoc_insertion_point(interface_extends:org.datacommons.proto.DataPoint.DataValueNumber)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional double value = 1;</code>
+       *
+       * @return Whether the value field is set.
+       */
+      boolean hasValue();
+      /**
+       * <code>optional double value = 1;</code>
+       *
+       * @return The value.
+       */
+      double getValue();
+    }
+    /** Protobuf type {@code org.datacommons.proto.DataPoint.DataValueNumber} */
+    public static final class DataValueNumber extends com.google.protobuf.GeneratedMessageV3
+        implements
+        // @@protoc_insertion_point(message_implements:org.datacommons.proto.DataPoint.DataValueNumber)
+        DataValueNumberOrBuilder {
+      private static final long serialVersionUID = 0L;
+      // Use DataValueNumber.newBuilder() to construct.
+      private DataValueNumber(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+
+      private DataValueNumber() {}
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+        return new DataValueNumber();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+        return this.unknownFields;
+      }
+
+      private DataValueNumber(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 9:
+                {
+                  bitField0_ |= 0x00000001;
+                  value_ = input.readDouble();
+                  break;
+                }
+              default:
+                {
+                  if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return org.datacommons.proto.Debug
+            .internal_static_org_datacommons_proto_DataPoint_DataValueNumber_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.datacommons.proto.Debug
+            .internal_static_org_datacommons_proto_DataPoint_DataValueNumber_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.datacommons.proto.Debug.DataPoint.DataValueNumber.class,
+                org.datacommons.proto.Debug.DataPoint.DataValueNumber.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int VALUE_FIELD_NUMBER = 1;
+      private double value_;
+      /**
+       * <code>optional double value = 1;</code>
+       *
+       * @return Whether the value field is set.
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional double value = 1;</code>
+       *
+       * @return The value.
+       */
+      public double getValue() {
+        return value_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeDouble(1, value_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream.computeDoubleSize(1, value_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+          return true;
+        }
+        if (!(obj instanceof org.datacommons.proto.Debug.DataPoint.DataValueNumber)) {
+          return super.equals(obj);
+        }
+        org.datacommons.proto.Debug.DataPoint.DataValueNumber other =
+            (org.datacommons.proto.Debug.DataPoint.DataValueNumber) obj;
+
+        if (hasValue() != other.hasValue()) return false;
+        if (hasValue()) {
+          if (java.lang.Double.doubleToLongBits(getValue())
+              != java.lang.Double.doubleToLongBits(other.getValue())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasValue()) {
+          hash = (37 * hash) + VALUE_FIELD_NUMBER;
+          hash =
+              (53 * hash)
+                  + com.google.protobuf.Internal.hashLong(
+                      java.lang.Double.doubleToLongBits(getValue()));
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueNumber parseFrom(
+          java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueNumber parseFrom(
+          java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueNumber parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueNumber parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueNumber parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueNumber parseFrom(
+          byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueNumber parseFrom(
+          java.io.InputStream input) throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueNumber parseFrom(
+          java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+            PARSER, input, extensionRegistry);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueNumber parseDelimitedFrom(
+          java.io.InputStream input) throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueNumber parseDelimitedFrom(
+          java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+            PARSER, input, extensionRegistry);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueNumber parseFrom(
+          com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueNumber parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+            PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() {
+        return newBuilder();
+      }
+
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+
+      public static Builder newBuilder(
+          org.datacommons.proto.Debug.DataPoint.DataValueNumber prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /** Protobuf type {@code org.datacommons.proto.DataPoint.DataValueNumber} */
+      public static final class Builder
+          extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+          implements
+          // @@protoc_insertion_point(builder_implements:org.datacommons.proto.DataPoint.DataValueNumber)
+          org.datacommons.proto.Debug.DataPoint.DataValueNumberOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+          return org.datacommons.proto.Debug
+              .internal_static_org_datacommons_proto_DataPoint_DataValueNumber_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.datacommons.proto.Debug
+              .internal_static_org_datacommons_proto_DataPoint_DataValueNumber_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.datacommons.proto.Debug.DataPoint.DataValueNumber.class,
+                  org.datacommons.proto.Debug.DataPoint.DataValueNumber.Builder.class);
+        }
+
+        // Construct using org.datacommons.proto.Debug.DataPoint.DataValueNumber.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+        }
+
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          value_ = 0D;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+          return org.datacommons.proto.Debug
+              .internal_static_org_datacommons_proto_DataPoint_DataValueNumber_descriptor;
+        }
+
+        @java.lang.Override
+        public org.datacommons.proto.Debug.DataPoint.DataValueNumber getDefaultInstanceForType() {
+          return org.datacommons.proto.Debug.DataPoint.DataValueNumber.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.datacommons.proto.Debug.DataPoint.DataValueNumber build() {
+          org.datacommons.proto.Debug.DataPoint.DataValueNumber result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.datacommons.proto.Debug.DataPoint.DataValueNumber buildPartial() {
+          org.datacommons.proto.Debug.DataPoint.DataValueNumber result =
+              new org.datacommons.proto.Debug.DataPoint.DataValueNumber(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.value_ = value_;
+            to_bitField0_ |= 0x00000001;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+          return super.setField(field, value);
+        }
+
+        @java.lang.Override
+        public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+
+        @java.lang.Override
+        public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index,
+            java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.datacommons.proto.Debug.DataPoint.DataValueNumber) {
+            return mergeFrom((org.datacommons.proto.Debug.DataPoint.DataValueNumber) other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.datacommons.proto.Debug.DataPoint.DataValueNumber other) {
+          if (other == org.datacommons.proto.Debug.DataPoint.DataValueNumber.getDefaultInstance())
+            return this;
+          if (other.hasValue()) {
+            setValue(other.getValue());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          org.datacommons.proto.Debug.DataPoint.DataValueNumber parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage =
+                (org.datacommons.proto.Debug.DataPoint.DataValueNumber) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private int bitField0_;
+
+        private double value_;
+        /**
+         * <code>optional double value = 1;</code>
+         *
+         * @return Whether the value field is set.
+         */
+        public boolean hasValue() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional double value = 1;</code>
+         *
+         * @return The value.
+         */
+        public double getValue() {
+          return value_;
+        }
+        /**
+         * <code>optional double value = 1;</code>
+         *
+         * @param value The value to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValue(double value) {
+          bitField0_ |= 0x00000001;
+          value_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional double value = 1;</code>
+         *
+         * @return This builder for chaining.
+         */
+        public Builder clearValue() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          value_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+        // @@protoc_insertion_point(builder_scope:org.datacommons.proto.DataPoint.DataValueNumber)
+      }
+
+      // @@protoc_insertion_point(class_scope:org.datacommons.proto.DataPoint.DataValueNumber)
+      private static final org.datacommons.proto.Debug.DataPoint.DataValueNumber DEFAULT_INSTANCE;
+
+      static {
+        DEFAULT_INSTANCE = new org.datacommons.proto.Debug.DataPoint.DataValueNumber();
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueNumber getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated
+      public static final com.google.protobuf.Parser<DataValueNumber> PARSER =
+          new com.google.protobuf.AbstractParser<DataValueNumber>() {
+            @java.lang.Override
+            public DataValueNumber parsePartialFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+              return new DataValueNumber(input, extensionRegistry);
+            }
+          };
+
+      public static com.google.protobuf.Parser<DataValueNumber> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<DataValueNumber> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.datacommons.proto.Debug.DataPoint.DataValueNumber getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+    }
+
+    public interface DataValueTextOrBuilder
+        extends
+        // @@protoc_insertion_point(interface_extends:org.datacommons.proto.DataPoint.DataValueText)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string value = 1;</code>
+       *
+       * @return Whether the value field is set.
+       */
+      boolean hasValue();
+      /**
+       * <code>optional string value = 1;</code>
+       *
+       * @return The value.
+       */
+      java.lang.String getValue();
+      /**
+       * <code>optional string value = 1;</code>
+       *
+       * @return The bytes for value.
+       */
+      com.google.protobuf.ByteString getValueBytes();
+    }
+    /** Protobuf type {@code org.datacommons.proto.DataPoint.DataValueText} */
+    public static final class DataValueText extends com.google.protobuf.GeneratedMessageV3
+        implements
+        // @@protoc_insertion_point(message_implements:org.datacommons.proto.DataPoint.DataValueText)
+        DataValueTextOrBuilder {
+      private static final long serialVersionUID = 0L;
+      // Use DataValueText.newBuilder() to construct.
+      private DataValueText(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+
+      private DataValueText() {
+        value_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+        return new DataValueText();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+        return this.unknownFields;
+      }
+
+      private DataValueText(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  com.google.protobuf.ByteString bs = input.readBytes();
+                  bitField0_ |= 0x00000001;
+                  value_ = bs;
+                  break;
+                }
+              default:
+                {
+                  if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return org.datacommons.proto.Debug
+            .internal_static_org_datacommons_proto_DataPoint_DataValueText_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.datacommons.proto.Debug
+            .internal_static_org_datacommons_proto_DataPoint_DataValueText_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.datacommons.proto.Debug.DataPoint.DataValueText.class,
+                org.datacommons.proto.Debug.DataPoint.DataValueText.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int VALUE_FIELD_NUMBER = 1;
+      private volatile java.lang.Object value_;
+      /**
+       * <code>optional string value = 1;</code>
+       *
+       * @return Whether the value field is set.
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string value = 1;</code>
+       *
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            value_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string value = 1;</code>
+       *
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+          return true;
+        }
+        if (!(obj instanceof org.datacommons.proto.Debug.DataPoint.DataValueText)) {
+          return super.equals(obj);
+        }
+        org.datacommons.proto.Debug.DataPoint.DataValueText other =
+            (org.datacommons.proto.Debug.DataPoint.DataValueText) obj;
+
+        if (hasValue() != other.hasValue()) return false;
+        if (hasValue()) {
+          if (!getValue().equals(other.getValue())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasValue()) {
+          hash = (37 * hash) + VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getValue().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueText parseFrom(
+          java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueText parseFrom(
+          java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueText parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueText parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueText parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueText parseFrom(
+          byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueText parseFrom(
+          java.io.InputStream input) throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueText parseFrom(
+          java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+            PARSER, input, extensionRegistry);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueText parseDelimitedFrom(
+          java.io.InputStream input) throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueText parseDelimitedFrom(
+          java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+            PARSER, input, extensionRegistry);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueText parseFrom(
+          com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueText parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+            PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() {
+        return newBuilder();
+      }
+
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+
+      public static Builder newBuilder(
+          org.datacommons.proto.Debug.DataPoint.DataValueText prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /** Protobuf type {@code org.datacommons.proto.DataPoint.DataValueText} */
+      public static final class Builder
+          extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+          implements
+          // @@protoc_insertion_point(builder_implements:org.datacommons.proto.DataPoint.DataValueText)
+          org.datacommons.proto.Debug.DataPoint.DataValueTextOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+          return org.datacommons.proto.Debug
+              .internal_static_org_datacommons_proto_DataPoint_DataValueText_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.datacommons.proto.Debug
+              .internal_static_org_datacommons_proto_DataPoint_DataValueText_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.datacommons.proto.Debug.DataPoint.DataValueText.class,
+                  org.datacommons.proto.Debug.DataPoint.DataValueText.Builder.class);
+        }
+
+        // Construct using org.datacommons.proto.Debug.DataPoint.DataValueText.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+        }
+
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          value_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+          return org.datacommons.proto.Debug
+              .internal_static_org_datacommons_proto_DataPoint_DataValueText_descriptor;
+        }
+
+        @java.lang.Override
+        public org.datacommons.proto.Debug.DataPoint.DataValueText getDefaultInstanceForType() {
+          return org.datacommons.proto.Debug.DataPoint.DataValueText.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.datacommons.proto.Debug.DataPoint.DataValueText build() {
+          org.datacommons.proto.Debug.DataPoint.DataValueText result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.datacommons.proto.Debug.DataPoint.DataValueText buildPartial() {
+          org.datacommons.proto.Debug.DataPoint.DataValueText result =
+              new org.datacommons.proto.Debug.DataPoint.DataValueText(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.value_ = value_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+          return super.setField(field, value);
+        }
+
+        @java.lang.Override
+        public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+
+        @java.lang.Override
+        public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index,
+            java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.datacommons.proto.Debug.DataPoint.DataValueText) {
+            return mergeFrom((org.datacommons.proto.Debug.DataPoint.DataValueText) other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.datacommons.proto.Debug.DataPoint.DataValueText other) {
+          if (other == org.datacommons.proto.Debug.DataPoint.DataValueText.getDefaultInstance())
+            return this;
+          if (other.hasValue()) {
+            bitField0_ |= 0x00000001;
+            value_ = other.value_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          org.datacommons.proto.Debug.DataPoint.DataValueText parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage =
+                (org.datacommons.proto.Debug.DataPoint.DataValueText) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private int bitField0_;
+
+        private java.lang.Object value_ = "";
+        /**
+         * <code>optional string value = 1;</code>
+         *
+         * @return Whether the value field is set.
+         */
+        public boolean hasValue() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional string value = 1;</code>
+         *
+         * @return The value.
+         */
+        public java.lang.String getValue() {
+          java.lang.Object ref = value_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              value_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string value = 1;</code>
+         *
+         * @return The bytes for value.
+         */
+        public com.google.protobuf.ByteString getValueBytes() {
+          java.lang.Object ref = value_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+            value_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string value = 1;</code>
+         *
+         * @param value The value to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValue(java.lang.String value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000001;
+          value_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string value = 1;</code>
+         *
+         * @return This builder for chaining.
+         */
+        public Builder clearValue() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          value_ = getDefaultInstance().getValue();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string value = 1;</code>
+         *
+         * @param value The bytes for value to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValueBytes(com.google.protobuf.ByteString value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000001;
+          value_ = value;
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+        // @@protoc_insertion_point(builder_scope:org.datacommons.proto.DataPoint.DataValueText)
+      }
+
+      // @@protoc_insertion_point(class_scope:org.datacommons.proto.DataPoint.DataValueText)
+      private static final org.datacommons.proto.Debug.DataPoint.DataValueText DEFAULT_INSTANCE;
+
+      static {
+        DEFAULT_INSTANCE = new org.datacommons.proto.Debug.DataPoint.DataValueText();
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueText getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated
+      public static final com.google.protobuf.Parser<DataValueText> PARSER =
+          new com.google.protobuf.AbstractParser<DataValueText>() {
+            @java.lang.Override
+            public DataValueText parsePartialFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+              return new DataValueText(input, extensionRegistry);
+            }
+          };
+
+      public static com.google.protobuf.Parser<DataValueText> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<DataValueText> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.datacommons.proto.Debug.DataPoint.DataValueText getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+    }
+
+    public interface DataValueReferenceOrBuilder
+        extends
+        // @@protoc_insertion_point(interface_extends:org.datacommons.proto.DataPoint.DataValueReference)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string value = 1;</code>
+       *
+       * @return Whether the value field is set.
+       */
+      boolean hasValue();
+      /**
+       * <code>optional string value = 1;</code>
+       *
+       * @return The value.
+       */
+      java.lang.String getValue();
+      /**
+       * <code>optional string value = 1;</code>
+       *
+       * @return The bytes for value.
+       */
+      com.google.protobuf.ByteString getValueBytes();
+    }
+    /** Protobuf type {@code org.datacommons.proto.DataPoint.DataValueReference} */
+    public static final class DataValueReference extends com.google.protobuf.GeneratedMessageV3
+        implements
+        // @@protoc_insertion_point(message_implements:org.datacommons.proto.DataPoint.DataValueReference)
+        DataValueReferenceOrBuilder {
+      private static final long serialVersionUID = 0L;
+      // Use DataValueReference.newBuilder() to construct.
+      private DataValueReference(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+
+      private DataValueReference() {
+        value_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+        return new DataValueReference();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+        return this.unknownFields;
+      }
+
+      private DataValueReference(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  com.google.protobuf.ByteString bs = input.readBytes();
+                  bitField0_ |= 0x00000001;
+                  value_ = bs;
+                  break;
+                }
+              default:
+                {
+                  if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return org.datacommons.proto.Debug
+            .internal_static_org_datacommons_proto_DataPoint_DataValueReference_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.datacommons.proto.Debug
+            .internal_static_org_datacommons_proto_DataPoint_DataValueReference_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.datacommons.proto.Debug.DataPoint.DataValueReference.class,
+                org.datacommons.proto.Debug.DataPoint.DataValueReference.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int VALUE_FIELD_NUMBER = 1;
+      private volatile java.lang.Object value_;
+      /**
+       * <code>optional string value = 1;</code>
+       *
+       * @return Whether the value field is set.
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string value = 1;</code>
+       *
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            value_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string value = 1;</code>
+       *
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+          return true;
+        }
+        if (!(obj instanceof org.datacommons.proto.Debug.DataPoint.DataValueReference)) {
+          return super.equals(obj);
+        }
+        org.datacommons.proto.Debug.DataPoint.DataValueReference other =
+            (org.datacommons.proto.Debug.DataPoint.DataValueReference) obj;
+
+        if (hasValue() != other.hasValue()) return false;
+        if (hasValue()) {
+          if (!getValue().equals(other.getValue())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasValue()) {
+          hash = (37 * hash) + VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getValue().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueReference parseFrom(
+          java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueReference parseFrom(
+          java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueReference parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueReference parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueReference parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueReference parseFrom(
+          byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueReference parseFrom(
+          java.io.InputStream input) throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueReference parseFrom(
+          java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+            PARSER, input, extensionRegistry);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueReference parseDelimitedFrom(
+          java.io.InputStream input) throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueReference parseDelimitedFrom(
+          java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+            PARSER, input, extensionRegistry);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueReference parseFrom(
+          com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueReference parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+            PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() {
+        return newBuilder();
+      }
+
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+
+      public static Builder newBuilder(
+          org.datacommons.proto.Debug.DataPoint.DataValueReference prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /** Protobuf type {@code org.datacommons.proto.DataPoint.DataValueReference} */
+      public static final class Builder
+          extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+          implements
+          // @@protoc_insertion_point(builder_implements:org.datacommons.proto.DataPoint.DataValueReference)
+          org.datacommons.proto.Debug.DataPoint.DataValueReferenceOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+          return org.datacommons.proto.Debug
+              .internal_static_org_datacommons_proto_DataPoint_DataValueReference_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.datacommons.proto.Debug
+              .internal_static_org_datacommons_proto_DataPoint_DataValueReference_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.datacommons.proto.Debug.DataPoint.DataValueReference.class,
+                  org.datacommons.proto.Debug.DataPoint.DataValueReference.Builder.class);
+        }
+
+        // Construct using org.datacommons.proto.Debug.DataPoint.DataValueReference.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+        }
+
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          value_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+          return org.datacommons.proto.Debug
+              .internal_static_org_datacommons_proto_DataPoint_DataValueReference_descriptor;
+        }
+
+        @java.lang.Override
+        public org.datacommons.proto.Debug.DataPoint.DataValueReference
+            getDefaultInstanceForType() {
+          return org.datacommons.proto.Debug.DataPoint.DataValueReference.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.datacommons.proto.Debug.DataPoint.DataValueReference build() {
+          org.datacommons.proto.Debug.DataPoint.DataValueReference result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.datacommons.proto.Debug.DataPoint.DataValueReference buildPartial() {
+          org.datacommons.proto.Debug.DataPoint.DataValueReference result =
+              new org.datacommons.proto.Debug.DataPoint.DataValueReference(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.value_ = value_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+          return super.setField(field, value);
+        }
+
+        @java.lang.Override
+        public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+
+        @java.lang.Override
+        public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index,
+            java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.datacommons.proto.Debug.DataPoint.DataValueReference) {
+            return mergeFrom((org.datacommons.proto.Debug.DataPoint.DataValueReference) other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.datacommons.proto.Debug.DataPoint.DataValueReference other) {
+          if (other
+              == org.datacommons.proto.Debug.DataPoint.DataValueReference.getDefaultInstance())
+            return this;
+          if (other.hasValue()) {
+            bitField0_ |= 0x00000001;
+            value_ = other.value_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          org.datacommons.proto.Debug.DataPoint.DataValueReference parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage =
+                (org.datacommons.proto.Debug.DataPoint.DataValueReference) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private int bitField0_;
+
+        private java.lang.Object value_ = "";
+        /**
+         * <code>optional string value = 1;</code>
+         *
+         * @return Whether the value field is set.
+         */
+        public boolean hasValue() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional string value = 1;</code>
+         *
+         * @return The value.
+         */
+        public java.lang.String getValue() {
+          java.lang.Object ref = value_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              value_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string value = 1;</code>
+         *
+         * @return The bytes for value.
+         */
+        public com.google.protobuf.ByteString getValueBytes() {
+          java.lang.Object ref = value_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+            value_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string value = 1;</code>
+         *
+         * @param value The value to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValue(java.lang.String value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000001;
+          value_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string value = 1;</code>
+         *
+         * @return This builder for chaining.
+         */
+        public Builder clearValue() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          value_ = getDefaultInstance().getValue();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string value = 1;</code>
+         *
+         * @param value The bytes for value to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValueBytes(com.google.protobuf.ByteString value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000001;
+          value_ = value;
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+        // @@protoc_insertion_point(builder_scope:org.datacommons.proto.DataPoint.DataValueReference)
+      }
+
+      // @@protoc_insertion_point(class_scope:org.datacommons.proto.DataPoint.DataValueReference)
+      private static final org.datacommons.proto.Debug.DataPoint.DataValueReference
+          DEFAULT_INSTANCE;
+
+      static {
+        DEFAULT_INSTANCE = new org.datacommons.proto.Debug.DataPoint.DataValueReference();
+      }
+
+      public static org.datacommons.proto.Debug.DataPoint.DataValueReference getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated
+      public static final com.google.protobuf.Parser<DataValueReference> PARSER =
+          new com.google.protobuf.AbstractParser<DataValueReference>() {
+            @java.lang.Override
+            public DataValueReference parsePartialFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+              return new DataValueReference(input, extensionRegistry);
+            }
+          };
+
+      public static com.google.protobuf.Parser<DataValueReference> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<DataValueReference> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.datacommons.proto.Debug.DataPoint.DataValueReference getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
     }
@@ -12872,6 +15506,18 @@ public final class Debug {
   private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_org_datacommons_proto_DataPoint_DataValue_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_org_datacommons_proto_DataPoint_DataValueNumber_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_datacommons_proto_DataPoint_DataValueNumber_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_org_datacommons_proto_DataPoint_DataValueText_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_datacommons_proto_DataPoint_DataValueText_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_org_datacommons_proto_DataPoint_DataValueReference_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_datacommons_proto_DataPoint_DataValueReference_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
       internal_static_org_datacommons_proto_StatValidationResult_descriptor;
   private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_org_datacommons_proto_StatValidationResult_fieldAccessorTable;
@@ -12918,22 +15564,30 @@ public final class Debug {
           + "\007 \001(\010\"\200\001\n\016ResolutionMode\022\037\n\033RESOLUTION_M"
           + "ODE_UNSPECIFIED\020\000\022\030\n\024RESOLUTION_MODE_NON"
           + "E\020\001\022\031\n\025RESOLUTION_MODE_LOCAL\020\002\022\030\n\024RESOLU"
-          + "TION_MODE_FULL\020\003\"\251\001\n\tDataPoint\022\014\n\004date\030\001"
+          + "TION_MODE_FULL\020\003\"\375\003\n\tDataPoint\022\014\n\004date\030\001"
           + " \001(\t\022:\n\006values\030\002 \003(\0132*.org.datacommons.p"
-          + "roto.DataPoint.DataValue\032R\n\tDataValue\022\r\n"
-          + "\005value\030\001 \001(\001\0226\n\tlocations\030\002 \003(\0132#.org.da"
-          + "tacommons.proto.Log.Location\"\234\003\n\024StatVal"
-          + "idationResult\022\022\n\nplace_dcid\030\001 \001(\t\022\025\n\rsta"
-          + "t_var_dcid\030\002 \001(\t\022\032\n\022measurement_method\030\003"
-          + " \001(\t\022\032\n\022observation_period\030\004 \001(\t\022\026\n\016scal"
-          + "ing_factor\030\005 \001(\t\022\014\n\004unit\030\006 \001(\t\022\\\n\023valida"
-          + "tion_counters\030\007 \003(\0132?.org.datacommons.pr"
-          + "oto.StatValidationResult.StatValidationE"
-          + "ntry\032\234\001\n\023StatValidationEntry\022\023\n\013counter_"
-          + "key\030\001 \001(\t\0228\n\016problem_points\030\002 \003(\0132 .org."
-          + "datacommons.proto.DataPoint\022\032\n\022additiona"
-          + "l_details\030\003 \001(\t\022\032\n\022percent_difference\030\004 "
-          + "\001(\001"
+          + "roto.DataPoint.DataValue\032\276\002\n\tDataValue\022\r"
+          + "\n\005value\030\001 \001(\001\0226\n\tlocations\030\002 \003(\0132#.org.d"
+          + "atacommons.proto.Log.Location\022G\n\013valueNu"
+          + "mber\030\003 \001(\01320.org.datacommons.proto.DataP"
+          + "oint.DataValueNumberH\000\022C\n\tvalueText\030\004 \001("
+          + "\0132..org.datacommons.proto.DataPoint.Data"
+          + "ValueTextH\000\022M\n\016valueReference\030\005 \001(\01323.or"
+          + "g.datacommons.proto.DataPoint.DataValueR"
+          + "eferenceH\000B\r\n\013value_oneof\032 \n\017DataValueNu"
+          + "mber\022\r\n\005value\030\001 \001(\001\032\036\n\rDataValueText\022\r\n\005"
+          + "value\030\001 \001(\t\032#\n\022DataValueReference\022\r\n\005val"
+          + "ue\030\001 \001(\t\"\234\003\n\024StatValidationResult\022\022\n\npla"
+          + "ce_dcid\030\001 \001(\t\022\025\n\rstat_var_dcid\030\002 \001(\t\022\032\n\022"
+          + "measurement_method\030\003 \001(\t\022\032\n\022observation_"
+          + "period\030\004 \001(\t\022\026\n\016scaling_factor\030\005 \001(\t\022\014\n\004"
+          + "unit\030\006 \001(\t\022\\\n\023validation_counters\030\007 \003(\0132"
+          + "?.org.datacommons.proto.StatValidationRe"
+          + "sult.StatValidationEntry\032\234\001\n\023StatValidat"
+          + "ionEntry\022\023\n\013counter_key\030\001 \001(\t\0228\n\016problem"
+          + "_points\030\002 \003(\0132 .org.datacommons.proto.Da"
+          + "taPoint\022\032\n\022additional_details\030\003 \001(\t\022\032\n\022p"
+          + "ercent_difference\030\004 \001(\001"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -13013,7 +15667,31 @@ public final class Debug {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_org_datacommons_proto_DataPoint_DataValue_descriptor,
             new java.lang.String[] {
-              "Value", "Locations",
+              "Value", "Locations", "ValueNumber", "ValueText", "ValueReference", "ValueOneof",
+            });
+    internal_static_org_datacommons_proto_DataPoint_DataValueNumber_descriptor =
+        internal_static_org_datacommons_proto_DataPoint_descriptor.getNestedTypes().get(1);
+    internal_static_org_datacommons_proto_DataPoint_DataValueNumber_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_org_datacommons_proto_DataPoint_DataValueNumber_descriptor,
+            new java.lang.String[] {
+              "Value",
+            });
+    internal_static_org_datacommons_proto_DataPoint_DataValueText_descriptor =
+        internal_static_org_datacommons_proto_DataPoint_descriptor.getNestedTypes().get(2);
+    internal_static_org_datacommons_proto_DataPoint_DataValueText_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_org_datacommons_proto_DataPoint_DataValueText_descriptor,
+            new java.lang.String[] {
+              "Value",
+            });
+    internal_static_org_datacommons_proto_DataPoint_DataValueReference_descriptor =
+        internal_static_org_datacommons_proto_DataPoint_descriptor.getNestedTypes().get(3);
+    internal_static_org_datacommons_proto_DataPoint_DataValueReference_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_org_datacommons_proto_DataPoint_DataValueReference_descriptor,
+            new java.lang.String[] {
+              "Value",
             });
     internal_static_org_datacommons_proto_StatValidationResult_descriptor =
         getDescriptor().getMessageTypes().get(3);
