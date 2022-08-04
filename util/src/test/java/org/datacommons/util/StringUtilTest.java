@@ -167,8 +167,13 @@ public class StringUtilTest {
     assertTrue(StringUtil.isNumber("10"));
     assertTrue(StringUtil.isNumber("-10"));
     assertTrue(StringUtil.isNumber("-.0010"));
+    assertTrue(StringUtil.isNumber(String.valueOf(Float.MAX_VALUE)));
+    assertTrue(StringUtil.isNumber(String.valueOf(Float.MIN_VALUE)));
+    assertTrue(StringUtil.isNumber(String.valueOf(Double.MAX_VALUE)));
+    assertTrue(StringUtil.isNumber(String.valueOf(Double.MIN_VALUE)));
     assertFalse(StringUtil.isNumber("-.0010x"));
     assertFalse(StringUtil.isNumber("0xdeadbeef"));
+    assertFalse(StringUtil.isNumber("07")); // octal number
     assertFalse(StringUtil.isNumber("dc/234"));
   }
 

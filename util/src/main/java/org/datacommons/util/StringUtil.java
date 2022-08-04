@@ -29,6 +29,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.regex.Pattern;
+import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.commons.text.StringEscapeUtils;
 
 // Common set of utils to handle strings
@@ -91,22 +92,21 @@ public class StringUtil {
   }
 
   public static boolean isNumber(String val) {
-    try {
-      Long.parseLong(val);
-      return true;
-    } catch (NumberFormatException e) {
+    // NumberUtils.isCreatable covers all positive cases we want to, but it also
+    // returns true for hexadecimal and octal numbers, so we return false for
+    // them before calling the method
+
+    // Hexadecimal numbers start with "0x"
+    if (val.startsWith("0x")) {
+      return false;
     }
-    try {
-      Long.parseUnsignedLong(val);
-      return true;
-    } catch (NumberFormatException e) {
+
+    // Octal numbers start with "0", but not "0."
+    if (val.startsWith("0") && !val.startsWith("0.")) {
+      return false;
     }
-    try {
-      Double.parseDouble(val);
-      return true;
-    } catch (NumberFormatException e) {
-    }
-    return false;
+
+    return NumberUtils.isCreatable(val);
   }
 
   public static boolean isBool(String val) {
